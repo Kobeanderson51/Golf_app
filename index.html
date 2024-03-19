@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <script defer src="./main.js"></script>
+  <script defer src="./toasts.js"></script>
+  <title>Golf Score App</title>
+</head>
+<body>
+  <div id="top">
+    <h1>Golf Score App</h1>
+    <div class="playernames">
+    <h2>Player 1:<input class="inputplayer1"></h2>
+    <h2>Player 2:<input class="inputplayer2"></h2>
+    <h2>Player 3:<input class="inputplayer3"></h2>
+    <h2>Player 4:<input class="inputplayer4"></h2>
+  <button class="savenames">Save Player Names</button>
+</div>
+    <h2>Course: </h2>
+    <select id="course" size="3">
+      <option id="option-1"value="1" selected>Thanksgiving Point Golf Course</option>
+      <option id="option-2"value="2">Fox Hollow Golf Course</option>
+      <option id="option-3"value="3">Spanish Oaks Golf Course</option>
+    </select>
+    <select size="3">
+      <option id="option-difficulty-1"value="1" selected>Men</option>
+      <option id="option-difficulty-2"value="2">Women</option>
+      <option id="option-difficulty-3"value="3">Pro</option>
+      <option id="option-difficulty-4"value="4">Champion</option>
+    </select>
+  </div> 
+  <div id="content">
+  
+  <div class="scorecard">
+    <div class="grid-container" id="1">
+        <div class="grid-item">Hole</div>
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">Out</div>
+        <div class="grid-item">Total</div>
+
+        <div class="grid-item">Yardage</div>
+        <div class="grid-item" id="Yardage1"></div>
+        <div class="grid-item" id="Yardage2"></div>
+        <div class="grid-item" id="Yardage3"></div>
+        <div class="grid-item" id="Yardage4"></div>
+        <div class="grid-item" id="Yardage5"></div>
+        <div class="grid-item" id="Yardage6"></div>
+        <div class="grid-item" id="Yardage7"></div>
+        <div class="grid-item" id="Yardage8"></div>
+        <div class="grid-item" id="Yardage9"></div>
+        <div class="grid-item" id="Yardageout"></div>
+        <div class="grid-item" id="Yardagetotal"></div>
+
+        <div class="grid-item">Par</div>
+        <div class="grid-item" id="Par1"></div>
+        <div class="grid-item" id="Par2"></div>
+        <div class="grid-item" id="Par3"></div>
+        <div class="grid-item" id="Par4"></div>
+        <div class="grid-item" id="Par5"></div>
+        <div class="grid-item" id="Par6"></div>
+        <div class="grid-item" id="Par7"></div>
+        <div class="grid-item" id="Par8"></div>
+        <div class="grid-item" id="Par9"></div>
+        <div class="grid-item" id="Parout"></div>
+        <div class="grid-item" id="Partotal"></div>
+
+        <div class="grid-item">Handicap</div>
+        <div class="grid-item" id="Handicap1"></div>
+        <div class="grid-item" id="Handicap2"></div>
+        <div class="grid-item" id="Handicap3"></div>
+        <div class="grid-item" id="Handicap4"></div>
+        <div class="grid-item" id="Handicap5"></div>
+        <div class="grid-item" id="Handicap6"></div>
+        <div class="grid-item" id="Handicap7"></div>
+        <div class="grid-item" id="Handicap8"></div>
+        <div class="grid-item" id="Handicap9"></div>
+        <div class="grid-item" id="Handicapout"></div>
+        <div class="grid-item" id="Handicaptotal"></div>
+
+        <div class="grid-item" id="player1-scorecard"></div>
+        <input id="p1-input1"type="number" min="0" max="10"></input>
+        <input id="p1-input2"type="number" min="0" max="10"></input>
+        <input id="p1-input3"type="number" min="0" max="10"></input>
+        <input id="p1-input4"type="number" min="0" max="10"></input>
+        <input id="p1-input5"type="number" min="0" max="10"></input>
+        <input id="p1-input6"type="number" min="0" max="10"></input>
+        <input id="p1-input7"type="number" min="0" max="10"></input>
+        <input id="p1-input8"type="number" min="0" max="10"></input>
+        <input id="p1-input9" type="number" min="0" max="10"></input>
+        <input id="p1-inputout" disabled type="number" min="0" max="10"></input>
+        <div class="grid-item" id="p1-total"></div>
+
+        <div class="grid-item" id="player2-scorecard"></div>
+        <input id="p2-input1"type="number" min="0" max="10"></input>
+        <input id="p2-input2"type="number" min="0" max="10"></input>
+        <input id="p2-input3"type="number" min="0" max="10"></input>
+        <input id="p2-input4"type="number" min="0" max="10"></input>
+        <input id="p2-input5"type="number" min="0" max="10"></input>
+        <input id="p2-input6"type="number" min="0" max="10"></input>
+        <input id="p2-input7"type="number" min="0" max="10"></input>
+        <input id="p2-input8"type="number" min="0" max="10"></input>
+        <input id="p2-input9"type="number" min="0" max="10"></input>
+        <input id="p2-inputout" disabled type="number" min="0" max="10"></input>
+        <div class="grid-item" id="p2-total"></div>
+
+        <div class="grid-item" id="player3-scorecard"></div>
+        <input id="p3-input1"type="number" min="0" max="10"></input>
+        <input id="p3-input2"type="number" min="0" max="10"></input>
+        <input id="p3-input3"type="number" min="0" max="10"></input>
+        <input id="p3-input4"type="number" min="0" max="10"></input>
+        <input id="p3-input5"type="number" min="0" max="10"></input>
+        <input id="p3-input6"type="number" min="0" max="10"></input>
+        <input id="p3-input7"type="number" min="0" max="10"></input>
+        <input id="p3-input8"type="number" min="0" max="10"></input>
+        <input id="p3-input9"type="number" min="0" max="10"></input>
+        <input id="p3-inputout" disabled type="number" min="0" max="10"></input>
+        <div class="grid-item" id="p3-total"></div>
+
+        <div class="grid-item" id="player4-scorecard"></div>
+        <input id="p4-input1"type="number" min="0" max="10"></input>
+        <input id="p4-input2"type="number" min="0" max="10"></input>
+        <input id="p4-input3"type="number" min="0" max="10"></input>
+        <input id="p4-input4"type="number" min="0" max="10"></input>
+        <input id="p4-input5"type="number" min="0" max="10"></input>
+        <input id="p4-input6"type="number" min="0" max="10"></input>
+        <input id="p4-input7"type="number" min="0" max="10"></input>
+        <input id="p4-input8"type="number" min="0" max="10"></input>
+        <input id="p4-input9"type="number" min="0" max="10"></input>
+        <input id="p4-inputout" disabled type="number" min="0" max="10"></input>
+        <div class="grid-item" id="p4-total"></div>
+
+        
+    </div>
+
+    <!-- second 9 holes -->
+    <div class="grid-container" id="2">
+      <div class="grid-item">Hole</div>
+      <div class="grid-item">10</div>
+      <div class="grid-item">11</div>
+      <div class="grid-item">12</div>
+      <div class="grid-item">13</div>
+      <div class="grid-item">14</div>
+      <div class="grid-item">15</div>
+      <div class="grid-item">16</div>
+      <div class="grid-item">17</div>
+      <div class="grid-item">18</div>
+      <div class="grid-item">In</div>
+      <div class="grid-item">Total</div>
+    
+      <div class="grid-item">Yardage</div>
+      <div class="grid-item" id="Yardage10"></div>
+      <div class="grid-item" id="Yardage11"></div>
+      <div class="grid-item" id="Yardage12"></div>
+      <div class="grid-item" id="Yardage13"></div>
+      <div class="grid-item" id="Yardage14"></div>
+      <div class="grid-item" id="Yardage15"></div>
+      <div class="grid-item" id="Yardage16"></div>
+      <div class="grid-item" id="Yardage17"></div>
+      <div class="grid-item" id="Yardage18"></div>
+      <div class="grid-item" id="Yardagein"></div>
+      <div class="grid-item" id="Yardagetotal"></div>
+     
+
+      <div class="grid-item">Par</div>
+      <div class="grid-item" id="Par10"></div>
+      <div class="grid-item" id="Par11"></div>
+      <div class="grid-item" id="Par12"></div>
+      <div class="grid-item" id="Par13"></div>
+      <div class="grid-item" id="Par14"></div>
+      <div class="grid-item" id="Par15"></div>
+      <div class="grid-item" id="Par16"></div>
+      <div class="grid-item" id="Par17"></div>
+      <div class="grid-item" id="Par18"></div>
+      <div class="grid-item" id="Parin"></div>
+      <div class="grid-item" id="Partotal"></div>
+      
+
+      <div class="grid-item">Handicap</div>
+      <div class="grid-item" id="Handicap10"></div>
+      <div class="grid-item" id="Handicap11"></div>
+      <div class="grid-item" id="Handicap12"></div>
+      <div class="grid-item" id="Handicap13"></div>
+      <div class="grid-item" id="Handicap14"></div>
+      <div class="grid-item" id="Handicap15"></div>
+      <div class="grid-item" id="Handicap16"></div>
+      <div class="grid-item" id="Handicap17"></div>
+      <div class="grid-item" id="Handicap18"></div>
+      <div class="grid-item" id="HandicapIn"></div>
+      <div class="grid-item" id="Handicaptotal"></div>
+      
+
+      <div class="grid-item" id="player1-scorecard-2"></div>
+      <input id="p1-input10"type="number" min="0" max="10"></input>
+      <input id="p1-input11"type="number" min="0" max="10"></input>
+      <input id="p1-input12"type="number" min="0" max="10"></input>
+      <input id="p1-input13"type="number" min="0" max="10"></input>
+      <input id="p1-input14"type="number" min="0" max="10"></input>
+      <input id="p1-input15"type="number" min="0" max="10"></input>
+      <input id="p1-input16"type="number" min="0" max="10"></input>
+      <input id="p1-input17"type="number" min="0" max="10"></input>
+      <input id="p1-input18"type="number" min="0" max="10"></input>
+      <input id="p1-inputIn" disabled type="number" min="0" max="10"></input>
+      <div class="grid-item" id="p1-total2"></div>
+
+      <div class="grid-item" id="player2-scorecard-2"></div>
+      <input id="p2-input10"type="number" min="0" max="10"></input>
+      <input id="p2-input11"type="number" min="0" max="10"></input>
+      <input id="p2-input12"type="number" min="0" max="10"></input>
+      <input id="p2-input13"type="number" min="0" max="10"></input>
+      <input id="p2-input14"type="number" min="0" max="10"></input>
+      <input id="p2-input15"type="number" min="0" max="10"></input>
+      <input id="p2-input16"type="number" min="0" max="10"></input>
+      <input id="p2-input17"type="number" min="0" max="10"></input>
+      <input id="p2-input18"type="number" min="0" max="10"></input>
+      <input id="p2-inputIn" disabled type="number" min="0" max="10"></input>
+      <div class="grid-item" id="p2-total2"></div>
+      
+      <div class="grid-item" id="player3-scorecard-2"></div>
+      <input id="p3-input10" type="number" min="0" max="10"></input>
+      <input id="p3-input11" type="number" min="0" max="10"></input>
+      <input id="p3-input12" type="number" min="0" max="10"></input>
+      <input id="p3-input13" type="number" min="0" max="10"></input>
+      <input id="p3-input14" type="number" min="0" max="10"></input>
+      <input id="p3-input15" type="number" min="0" max="10"></input>
+      <input id="p3-input16" type="number" min="0" max="10"></input>
+      <input id="p3-input17" type="number" min="0" max="10"></input>
+      <input id="p3-input18" type="number" min="0" max="10"></input>
+      <input id="p3-inputIn" disabled type="number" min="0" max="10"></input>
+      <div class="grid-item" id="p3-total2"></div>
+
+      <div class="grid-item" id="player4-scorecard-2"></div>
+      <input id="p4-input10" type="number" min="0" max="10"></input>
+      <input id="p4-input11" type="number" min="0" max="10"></input>
+      <input id="p4-input12" type="number" min="0" max="10"></input>
+      <input id="p4-input13" type="number" min="0" max="10"></input>
+      <input id="p4-input14" type="number" min="0" max="10"></input>
+      <input id="p4-input15" type="number" min="0" max="10"></input>
+      <input id="p4-input16" type="number" min="0" max="10"></input>
+      <input id="p4-input17" type="number" min="0" max="10"></input>
+      <input id="p4-input18"type="number" min="0" max="10"></input>
+      <input id="p4-inputIn" disabled type="number" min="0" max="10"></input>
+     <div class="grid-item" id="p4-total2"></div>
+
+  </div>
+    </div>
+    
+  </div>
+</body>
+</html>
